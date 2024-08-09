@@ -1,0 +1,36 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"headers": {
+						"Authorization": "Bearer @keyvault(kaggleApiKey)"
+					},
+					"linkedServices": [
+						{
+							"referenceName": "AzureKeyVaultLS",
+							"type": "LinkedServiceReference"
+						}
+					],
+					"url": "https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data?select=Amazon+Sale+Report.csv"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-08-08T19:20:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

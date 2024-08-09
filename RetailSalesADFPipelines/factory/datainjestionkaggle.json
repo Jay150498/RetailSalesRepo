@@ -1,0 +1,9 @@
+{
+	"name": "datainjestionkaggle",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "be689fcd-d10d-403b-816d-e3c7bfc5f97b",
+		"tenantId": "e75b8380-abd5-4a92-9bd9-41dffa92d385"
+	}
+}

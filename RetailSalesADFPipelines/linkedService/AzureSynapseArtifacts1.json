@@ -1,0 +1,13 @@
+{
+	"name": "AzureSynapseArtifacts1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSynapseArtifacts",
+		"typeProperties": {
+			"endpoint": "https://retailsalesws.dev.azuresynapse.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/bcf8d11e-de59-4024-bb63-ea1da01a08c4/resourceGroups/Retailsales/providers/Microsoft.Synapse/workspaces/retailsalesws"
+		}
+	}
+}

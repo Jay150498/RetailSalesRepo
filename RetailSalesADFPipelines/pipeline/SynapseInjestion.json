@@ -1,0 +1,37 @@
+{
+	"name": "SynapseInjestion",
+	"properties": {
+		"activities": [
+			{
+				"name": "Synapse Notebook",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": {
+							"value": "DataInjestion",
+							"type": "Expression"
+						},
+						"type": "NotebookReference"
+					},
+					"snapshot": true
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSynapseArtifacts1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-08-08T19:20:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
